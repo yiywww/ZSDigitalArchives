@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中山文旅 · 数字档案</title>
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="shell">
+
+    <header class="masthead">
+      <div class="seal-mark" aria-hidden="true">香<br />山</div>
+      <div class="masthead-text">
+        <h1>中山文旅 · 数字档案</h1>
+        <p>三重门径，遍览香山风物与人情</p>
+      </div>
+      <div class="masthead-actions">
+        <button id="btn-shelf" class="ghost-btn" type="button">卷宗架</button>
+        <button id="btn-reset" class="ghost-btn" type="button">另起一卷</button>
+      </div>
+    </header>
+
+    <section class="portals" id="portals" aria-label="选择视角">
+      <div class="portals-head">
+        <span class="rule"></span>
+        <h2>请择一门径</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="portal-list" id="portal-list"></div>
+    </section>
+
+    <main class="hall" id="hall">
+      <div class="hall-empty" id="hall-empty">
+        <div class="empty-seal">問</div>
+        <p class="empty-title">问以香山，答有出处</p>
+        <p class="empty-sub" id="empty-sub">先择一门径，再道出你的疑问</p>
+        <div class="suggestions" id="suggestions"></div>
+      </div>
+      <div class="thread" id="thread" aria-live="polite"></div>
+    </main>
+
+    <footer class="composer">
+      <div class="composer-card">
+        <textarea id="input" rows="1" placeholder="键入你的疑问……"></textarea>
+        <div class="composer-side">
+          <button id="btn-stop" class="stop-btn" type="button" hidden>停止</button>
+          <button id="btn-send" class="send-btn" type="button">
+            <span>发问</span>
+          </button>
+        </div>
+      </div>
+      <div class="composer-foot">
+        <span id="dossier-no">卷宗编号 ——</span>
+        <span class="dot">·</span>
+        <span>Enter 发问 · Shift + Enter 换行</span>
+        <span class="dot">·</span>
+        <span>答复均出自知识库档案</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <aside class="shelf" id="shelf" aria-label="卷宗架">
+    <div class="shelf-head">
+      <h2>卷宗架</h2>
+      <button id="shelf-close" class="ghost-btn" type="button">收起</button>
+    </div>
+    <button id="shelf-new" class="shelf-new" type="button">＋ 另起一卷</button>
+    <div class="shelf-list" id="shelf-list"></div>
+    <p class="shelf-foot">旧卷存于本机浏览器，可随时翻回</p>
+  </aside>
+  <div class="shelf-mask" id="shelf-mask"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
